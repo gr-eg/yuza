@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "GET /users" do
   let!(:users) { FactoryGirl.create_list(:user, 4) }
-  before { get '/users' }
+  before { get users_path }
 
   it 'returns an array of users' do
     expect(json["users"].count).to eq(4)

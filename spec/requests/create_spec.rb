@@ -4,7 +4,7 @@ RSpec.describe "POST /users" do
   let(:valid_attributes) { FactoryGirl.attributes_for(:user, username: "bob") }
 
   context 'when the request is valid' do
-    before { post '/users', params: valid_attributes }
+    before { post users_path, params: valid_attributes }
 
     it 'creates a user' do
       expect(json['username']).to eq('bob')
