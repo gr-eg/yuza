@@ -7,7 +7,7 @@ RSpec.describe "POST /users" do
     before { post users_path, params: valid_attributes }
 
     it 'creates a user' do
-      expect(json['username']).to eq('bob')
+      expect(json["user"]['username']).to eq('bob')
     end
 
     it 'returns status code 201' do
