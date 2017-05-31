@@ -18,7 +18,7 @@ RSpec.describe "POST /users" do
   context 'when the request is invalid' do
     let(:invalid_attributes) { FactoryGirl.attributes_for(:user, username: "") }
 
-    before { post '/users', params: invalid_attributes }
+    before { post users_path, params: invalid_attributes }
 
     it 'returns status code 422' do
       expect(response).to have_http_status(422)
