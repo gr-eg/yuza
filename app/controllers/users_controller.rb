@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  SECRET_KEY = "supersecret".freeze
+
   def create
     @user = User.new(user_params)
 
@@ -27,9 +29,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    head :unauthorized unless token_is_valid?
+    user = User.find(params[:id])
+    user.destroy
+  end
+
   private
 
   def user_params
     params.permit(:username, :email, :password)
+  end
+
+  def token_is_valid?
+    request.headers[:secretkey] == SECRET_KEY
   end
 end
