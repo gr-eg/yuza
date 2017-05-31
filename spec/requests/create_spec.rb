@@ -1,13 +1,13 @@
 require "rails_helper"
 
 RSpec.describe "POST /users" do
-  let(:valid_attributes) { FactoryGirl.attributes_for(:user) }
+  let(:valid_attributes) { FactoryGirl.attributes_for(:user, username: "bob") }
 
   context 'when the request is valid' do
     before { post '/users', params: valid_attributes }
 
     it 'creates a user' do
-      expect(json['username']).to eq('gr-eg')
+      expect(json['username']).to eq('bob')
     end
 
     it 'returns status code 201' do
