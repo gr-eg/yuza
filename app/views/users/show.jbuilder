@@ -1,1 +1,1 @@
-json.(@user, :id, :username, :email)
+json.partial! "users/user", user: @user
