@@ -20,3 +20,7 @@
 
 ### Running the tests
 `$ bundle exec rspec`
+
+### Documentation
+
+[Users](/doc/api/users.md)
