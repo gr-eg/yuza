@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :user do
-    username "gr-eg"
-    sequence :email { |n| "user#{n}@example.com"}
-    password :password
+    username { Faker::Name.name }
+    email { Faker::Internet.email }
+    password "password"
   end
 end
