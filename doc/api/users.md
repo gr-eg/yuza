@@ -38,6 +38,12 @@ All requests should have a the following headers:
 
 /users
 
+#### Parameters
+##### Page
+User are returned in pages of 25, use the `links` object to retrieve extra pages.
+
+`/users?page=2`
+
 #### Response
 
 ```json
@@ -54,7 +60,13 @@ All requests should have a the following headers:
       "username": "sam",
       "email": "sam@example.com"
     }
-  ]
+  ],
+  "links": {
+    "first": true,
+    "last": false,
+    "prev": null,
+    "next": 2
+  }
 }
 ```
 

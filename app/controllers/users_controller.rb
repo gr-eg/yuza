@@ -12,7 +12,13 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    @users = User.page(params[:page] || 1)
+    @pagination = {
+      first: @users.first_page?,
+      last: @users.last_page?,
+      prev: @users.prev_page,
+      next: @users.next_page
+    }
   end
 
   def show
