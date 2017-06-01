@@ -8,4 +8,10 @@ RSpec.describe User do
   it { should validate_uniqueness_of(:username) }
 
   it { should have_secure_password }
+
+  it "validates email address" do
+    user = FactoryGirl.build(:user, email: "this.is.not.an.email")
+    user.valid?
+    expect(user.errors).to have_key(:email)
+  end
 end
