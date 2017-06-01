@@ -1,4 +1,6 @@
-# Yuza
+# Yuza (User)
+
+https://yuza.herokuapp.com
 
 ### Requirements
 - Ruby 2.4.1

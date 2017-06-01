@@ -7,7 +7,7 @@ All requests should have a the following headers:
 
 #### URL
 
-/users
+https://yuza.herokuapp.com/users
 
 #### Request
 
@@ -36,7 +36,7 @@ All requests should have a the following headers:
 
 #### URL
 
-/users
+https://yuza.herokuapp.com/users
 
 #### Parameters
 ##### Page
@@ -74,7 +74,7 @@ User are returned in pages of 25, use the `links` object to retrieve extra pages
 
 #### URL
 
-/users/2
+https://yuza.herokuapp.com/users/2
 
 #### Response
 
@@ -91,7 +91,7 @@ User are returned in pages of 25, use the `links` object to retrieve extra pages
 
 #### URL
 
-/users/2
+https://yuza.herokuapp.com/users/2
 
 #### Request
 
@@ -122,7 +122,7 @@ When deleting any user pass the following header:
 
 #### URL
 
-/users/2
+https://yuza.herokuapp.com/users/2
 
 #### Response
 
